@@ -1,13 +1,13 @@
 import os
-from apikey import API_KEY
 import streamlit as st
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
-
-os.environ["OPENAI_API_KEY"] = API_KEY
+from dotenv import load_dotenv
+load_dotenv()
+# os.environ["OPENAI_API_KEY"] = API_KEY
 
 # App framework
 st.title('Whatever GPT creator')
